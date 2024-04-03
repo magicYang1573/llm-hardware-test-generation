@@ -1,0 +1,9 @@
+First you should reset the DUT, and your design in in initial stage a.
+To transition to state b, set LINE1==0 and LINE2==0 when in stage a.
+To transition to state f, set LINE1==1 and LINE2==1 when in stage a.
+To transition to state c, set LINE1==0 and LINE2==0 when in stage b.
+To transition to state g, set LINE1==1 and LINE2==1 when in stage b.
+To transition to state wf0, set LINE1==0 and LINE2==0 when in stage c.
+To transition to state wf1, set LINE1==1 and LINE2==1 when in stage c.
+To transition to state e, set LINE1==1 and LINE2==1 when in stage wf0.
+Remember, in each state, identify any uncovered lines and select the appropriate input to cover them.

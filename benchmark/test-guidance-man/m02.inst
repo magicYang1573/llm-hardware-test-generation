@@ -1,0 +1,8 @@
+First you should reset the DUT, and your design in in initial stage A.
+To transition to state B, wait a clock cycle while in state S0.
+To transition to state C, set LINEA==0 while in state B.
+To transition to state D, you should first go to state C then set LINEA==0 when in state C.
+To transition to state E, you should first go to state D, then next clock cycle you are in state E.
+To transition to state F, you can first go to state B, then set LINEA==0 when in state B. 
+To transition to state G, you should first go to state F, then next clock cycle you are in state G.
+Remember, in each state, identify any uncovered lines and select the appropriate input to cover them.

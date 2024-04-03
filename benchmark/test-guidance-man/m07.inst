@@ -1,0 +1,4 @@
+First, you should reset the design to make count zero and make the initial state to STATE_IDLE.
+To transition to state STATE_PROCESSING, set data_in not equals to 8'hFF when in STATE_IDLE.
+To transition to state STATE_OUTPUT, first go to state STATE_PROCESSING. In processing stage, temp_data is assigned. Next stage is STATE_OUTPUT.
+Remember, in each state, identify any uncovered lines and select the appropriate input to cover them.

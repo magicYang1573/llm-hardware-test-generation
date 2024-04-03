@@ -1,0 +1,6 @@
+
+First you should reset the DUT, and your design in in initial stage S0.
+To transition to state S1, set inp1=1 while in state S0.
+To transition to state S2, set inp1=0 and inp2=1 while in state S0.
+To transition to state S3, first move to state S1, then set inp1=1.
+Remember, in each state, identify any uncovered lines and select the appropriate input to cover them.

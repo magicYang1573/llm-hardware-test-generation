@@ -1,0 +1,10 @@
+This Verilog module, named top, is a state machine designed to control a traffic light system. It has four inputs: clk (the clock signal), reset (the reset signal), pedestrian_button (a signal indicating whether the pedestrian crossing button has been pressed), and car_sensor (a signal indicating whether a car is detected). The output is a 3-bit signal, lights, which represents the state of the traffic lights.
+The module uses four states represented by 2-bit signals: WAIT, GO, WARN, and STOP. The state machine starts in the WAIT state. It also has a counter, count, which is used to time the duration of certain states.
+The lights signal uses 3 bits to represent RED, YELLOW, and GREEN lights.
+The state machine works as follows:
+In the WAIT state, if a car is detected (car_sensor is high), the lights turn RED and the state transitions to GO. If no car is detected, the lights turn YELLOW and the state transitions to WARN.
+In the GO state, if the counter is less than 6, the lights turn GREEN and the state remains GO. If the counter is 6 or more, the lights turn YELLOW and the state transitions to WARN.
+In the WARN state, if the counter is less than 2, the lights remain YELLOW and the state remains WARN. If the counter is 2 or more and the pedestrian button has been pressed, the lights turn RED and the state transitions to STOP. If the counter is 2 or more and the pedestrian button has not been pressed, the lights turn RED and the state transitions to GO.
+In the STOP state, if the counter is less than 4, the lights remain RED and the state remains STOP. If the counter is 4 or more, the lights turn GREEN and the state transitions to GO.
+The reset input asynchronously resets the state to WAIT and the counter to 0.
+The counter increments by 1 at every positive edge of the clock, unless it reaches 10, at which point it resets to 0. This mechanism is used to time the duration of the traffic light states.

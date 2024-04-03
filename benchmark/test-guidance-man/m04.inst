@@ -1,0 +1,3 @@
+First, you should reset the design to make count zero.
+In each clock, set enable to be 1, then the count will increment 1.
+Keep count increment for 16 times then the overflow is active.

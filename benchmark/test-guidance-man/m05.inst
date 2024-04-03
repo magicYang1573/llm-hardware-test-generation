@@ -1,0 +1,5 @@
+First, you should reset the design to make count zero.
+The count increment 1 when enable==1 and updown==1;
+The count decrease 1 when enable==1 and updown==0;
+To trigger the underflow, keep updown==0 and enable==1 when count is zero. 
+To trigger the overflow, keep updown==1 and enable==1 when count is 15. This means you should make counter increment for 16 times. 

@@ -1,0 +1,18 @@
+This is a Verilog module that implements a finite state machine (FSM) with four states (S0, S1, S2, S3) and two inputs (inp1, inp2). The FSM transitions between states based on the values of these inputs. The FSM also has a clock (clk) and a reset (rst) input, and a single output (outp).
+
+The FSM has the following behavior:
+
+- When reset (rst) is active, the FSM goes to the initial state S0.
+- In each clock cycle, based on the current state and the inputs, the FSM determines the next state and the output.
+
+The state transitions and output behaviors are as follows:
+
+State S0: The output (outp) is 0. If inp1 is 1, it transitions to state S1. If inp2 is 1, it transitions to state S2. If both inp1 and inp2 are 0, it stays in state S0.
+
+State S1: The output (outp) is 1. If inp1 is 1, it transitions to state S3. If inp2 is 1, it transitions to state S0. If both inp1 and inp2 are 0, it stays in state S1.
+
+State S2: The output (outp) is 0. If inp1 is 1, it transitions to state S0. If inp2 is 1, it transitions to state S3. If both inp1 and inp2 are 0, it stays in state S2.
+
+State S3: The output (outp) is 1. If inp1 is 1, it transitions to state S2. If inp2 is 1, it transitions to state S1. If both inp1 and inp2 are 0, it stays in state S3.
+
+The state transition logic is implemented in a combinational always block, which generates the next_state and outp based on the current_state and inputs. The state update logic is implemented in a sequential always block, which updates the current_state on the rising edge of the clock or the reset signal.

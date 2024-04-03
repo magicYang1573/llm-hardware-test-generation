@@ -1,0 +1,17 @@
+This is a finite state machine (FSM) implemented in Verilog, a hardware description language used for the design of digital circuits.
+
+The FSM has seven states, labeled from A to G, which are defined as parameters with values from 0 to 6. The state of the FSM is stored in the 3-bit register stato. The FSM has one input, LINEA, and one output, U.
+
+The FSM operates synchronously with a clock signal clk and it can be reset with the rst signal. When reset, the FSM goes to the initial state A and the output U is set to 0.
+
+On every positive edge of the clock, the FSM transitions to a new state based on the current state and the value of the LINEA input. The output U is set to 0 in all states, except in state E where U is set to 1.
+
+Here is a brief description of the state transitions:
+
+In state A, the FSM always transitions to state B.
+In state B, the FSM transitions to state C if LINEA is 0, and to state F if LINEA is 1.
+In state C, the FSM transitions to state D if LINEA is 0, and to state G if LINEA is 1.
+In state D, the FSM always transitions to state E.
+In state E, the FSM always transitions back to state B and sets the output U to 1.
+In state F, the FSM always transitions to state G.
+In state G, the FSM transitions back to state E if LINEA is 0, and to state A if LINEA is 1.

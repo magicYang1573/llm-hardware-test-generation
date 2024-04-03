@@ -1,0 +1,4 @@
+First you should reset the design. Then the initial stage is in WAIT.
+To transition to stage GO, set car_sensor=1 when in stage WAIT, else you transition to stage WARN.
+To transition to stage STOP, set car_sensor=1 and keep count greater than 2.
+Remember, in each state, identify any uncovered lines and select the appropriate input to cover them.

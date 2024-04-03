@@ -1,0 +1,6 @@
+This Verilog design is a 4-bit counter with an overflow bit. It is a synchronous design, meaning it operates based on a clock signal (clk). It also has a reset signal (rst) to clear the counter and overflow bit, and an enable signal to control when the counter should increment.
+Here's a detailed explanation of the logic:
+The initial block sets the count and overflow to 0 at the start.
+The always block is triggered at every positive edge of the clock or reset signal.
+If the reset signal is high, the count and overflow are set to 0. This takes precedence over the enable condition because it's checked first.
+If the reset signal is not high and the enable signal is high, the counter checks the current count. If the count is at its maximum (15), it sets the overflow bit to 1 and does not increment the count. If the count is less than 15, it increments the count by 1 and sets the overflow bit to 0.

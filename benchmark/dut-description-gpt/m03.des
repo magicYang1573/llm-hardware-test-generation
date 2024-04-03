@@ -1,0 +1,24 @@
+This Verilog code describes a finite state machine (FSM) with two inputs, LINE1 and LINE2, two outputs, OUTP and OVERFLW, and a 3-bit state variable, stato. The FSM is synchronous, meaning it responds to the rising edge of the clock signal (clk). The reset signal (rst) is active-high; when it is asserted, the FSM resets to the initial state.
+
+The FSM has eight states, specified by the parameters a through g and wf0 and wf1. The initial state is 'a'. The state transitions and output values are determined by the case statement inside the always block.
+
+The case statement is evaluated on every rising edge of the clock. If the reset signal is high, the FSM resets to state 'a' and both outputs are set to 0. If the reset signal is not high, the current state of the FSM determines the next state and the output values.
+
+Here's a detailed explanation of each state:
+
+State 'a': If both inputs are high, the next state is 'f'. Otherwise, it transitions to 'b'. The output OUTP is the XOR of the two inputs, and OVERFLW is set to 0.
+
+State 'e': If both inputs are high, the next state is 'f'. Otherwise, it transitions to 'b'. The output OUTP is the XOR of the two inputs, and OVERFLW is set to 1.
+
+State 'b': If both inputs are high, it transitions to 'g'. Otherwise, it goes to 'c'. The output OUTP is the XOR of the two inputs, and OVERFLW is set to 0.
+
+State 'f': If either input is high, it transitions to 'g'. Otherwise, it goes to 'c'. The output OUTP is the negation of the XOR of the two inputs, and OVERFLW is set to 0.
+
+State 'c': If both inputs are high, it transitions to 'wf1'. Otherwise, it goes to 'wf0'. The output OUTP is the XOR of the two inputs, and OVERFLW is set to 0.
+
+State 'g': If either input is high, it transitions to 'wf1'. Otherwise, it goes to 'wf0'. The output OUTP is the negation of the XOR of the two inputs, and OVERFLW is set to 0.
+
+State 'wf0': If both inputs are high, it transitions to 'e'. Otherwise, it goes to 'a'. The output OUTP is the XOR of the two inputs, and OVERFLW is set to 0.
+
+State 'wf1': If either inputs are high, it transitions to 'e'. Otherwise, it goes to 'a'. The output OUTP is the negation of the XOR of the two inputs, and OVERFLW is set to 0.
+

@@ -1,0 +1,5 @@
+The design process begins at the INIT stage and then transitions through the stages of ANALISI_REQ and ASSEGNA repeatedly.
+You should consider the grant strategy and read the Verilog code.
+For Single Request: Set one of the REQUEST inputs high (1) at the rising edge of the clock. This should move the system to the ANALISI_REQ state and then to the ASSEGNA state, granting the request.
+For Multiple Requests: Set multiple REQUEST inputs high at the rising edge of the clock. This should queue the requests and grant them in the order they were received.
+For Repeated Requests: Set the same REQUEST input high for multiple clock cycles. This should test the functionality of the fu1, fu2, fu3, fu4 registers, which appear to prevent the same request from being queued multiple times in a row.
