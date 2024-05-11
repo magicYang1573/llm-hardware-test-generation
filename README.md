@@ -4,7 +4,7 @@ You can learn more in our LAD'24 paper (to be appear).
 
 Ruiyang Ma, Yuxin Yang, Ziqian Liu, Jiaxi Zhang, Min Li, Junhua Huang and Guojie Luo*, **VerilogReader: LLM-Aided Hardware Test Generation** in *The First IEEE International Workshop on LLM-Aided Design (LAD'24)*, San Jose, CA, June 2024
 
-![overview](./overview.png =600x)
+![overview](./overview.png){:height="70%" width="70%"}
 
 
 ## Environment Set Up
