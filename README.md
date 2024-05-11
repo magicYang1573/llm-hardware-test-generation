@@ -1,6 +1,11 @@
 # LLM for Hardware Test Generation
-## Introduction
-This is the source code of submission *VerilogReader: LLM-Aided Hardware Test Generation* to *The First IEEE International Workshop on LLM-Aided Design (LAD'24)*
+## LAD'24 Paper
+You can learn more in our LAD'24 paper (to be appear).
+
+Ruiyang Ma, Yuxin Yang, Ziqian Liu, Jiaxi Zhang, Min Li, Junhua Huang and Guojie Luo*, **VerilogReader: LLM-Aided Hardware Test Generation** in *The First IEEE International Workshop on LLM-Aided Design (LAD'24)*, San Jose, CA, June 2024
+
+![overview](./overview.png)
+
 
 ## Environment Set Up
 1> Verilator Installation
