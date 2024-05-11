@@ -9,6 +9,7 @@ Ruiyang Ma, Yuxin Yang, Ziqian Liu, Jiaxi Zhang, Min Li, Junhua Huang and Guojie
 
 ## Environment Set Up
 1> Verilator Installation
+
 https://verilator.org/guide/latest/install.html#
 ```
 # By apt
@@ -24,6 +25,7 @@ make -j4
 ```
 
 2> Pyverilog Installation
+
 https://github.com/PyHDI/Pyverilog
 
 ```
@@ -37,6 +39,7 @@ python3 setup.py install --user
 ```
 
 3> OPENAI User Setup
+
 Our framework use OPENAI GPT as our LLM models, so you need an account for OPENAI key. 
 ```
 export OPENAI_API_KEY='xxx'
