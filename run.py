@@ -24,7 +24,7 @@ def main():
         dir_name = dut.split('/')[-1].split('.')[0]
         if os.path.exists('./logs/'+dir_name):
             os.system('rm -rf ./logs/'+dir_name)
-            os.system('cd ./logs && mkdir ' + dir_name)
+        os.system('cd ./logs && mkdir ' + dir_name)
         
         for i in range(0, cnt):
             # reset simulation env

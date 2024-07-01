@@ -1,8 +1,8 @@
 # LLM for Hardware Test Generation
 ## LAD'24 Paper
-You can learn more in our LAD'24 paper (to be appear).
+You can learn more in our LAD'24 paper.
 
-Ruiyang Ma, Yuxin Yang, Ziqian Liu, Jiaxi Zhang, Min Li, Junhua Huang and Guojie Luo*, **VerilogReader: LLM-Aided Hardware Test Generation** in *The First IEEE International Workshop on LLM-Aided Design (LAD'24)*, San Jose, CA, June 2024
+Ruiyang Ma, Yuxin Yang, Ziqian Liu, Jiaxi Zhang, Min Li, Junhua Huang and Guojie Luo*, **VerilogReader: LLM-Aided Hardware Test Generation** in *The First IEEE International Workshop on LLM-Aided Design (LAD'24)*, San Jose, CA, June 2024. [Best Paper Nominee]
 
 ![overview](./overview.png)
 
